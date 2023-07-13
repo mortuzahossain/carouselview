@@ -39,6 +39,7 @@ public class CarouselView extends FrameLayout {
     private int slideInterval = DEFAULT_SLIDE_INTERVAL;
     private int mIndicatorGravity = DEFAULT_GRAVITY;
     private int indicatorMarginVertical;
+    private int indicatorMarginTop;
     private int indicatorMarginHorizontal;
     private int pageTransformInterval = DEFAULT_SLIDE_VELOCITY;
     private int indicatorVisibility = DEFAULT_INDICATOR_VISIBILITY;
@@ -95,7 +96,18 @@ public class CarouselView extends FrameLayout {
             TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CarouselView, defStyleAttr, 0);
             try {
                 indicatorMarginVertical = a.getDimensionPixelSize(R.styleable.CarouselView_indicatorMarginVertical, getResources().getDimensionPixelSize(R.dimen.default_indicator_margin_vertical));
+                indicatorMarginTop = a.getDimensionPixelSize(R.styleable.CarouselView_indicatorMarginTop, getResources().getDimensionPixelSize(R.dimen.default_indicator_margin_top));
                 indicatorMarginHorizontal = a.getDimensionPixelSize(R.styleable.CarouselView_indicatorMarginHorizontal, getResources().getDimensionPixelSize(R.dimen.default_indicator_margin_horizontal));
+
+
+
+//                containerViewPager.setPageMargin();
+
+                FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                params.setMargins(0,0 , 0, indicatorMarginTop);
+                containerViewPager.setLayoutParams(params);
+
+
                 setPageTransformInterval(a.getInt(R.styleable.CarouselView_pageTransformInterval, DEFAULT_SLIDE_VELOCITY));
                 setSlideInterval(a.getInt(R.styleable.CarouselView_slideInterval, DEFAULT_SLIDE_INTERVAL));
                 setOrientation(a.getInt(R.styleable.CarouselView_indicatorOrientation, LinearLayout.HORIZONTAL));

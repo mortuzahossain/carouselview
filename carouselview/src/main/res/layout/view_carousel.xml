@@ -5,7 +5,7 @@
     <com.synnapps.carouselview.CarouselViewPager
         android:id="@+id/containerViewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
 
     <com.synnapps.carouselview.CirclePageIndicator
         android:id="@+id/indicator"

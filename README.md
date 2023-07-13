@@ -41,7 +41,8 @@ Usage
         app:radius="6dp"
         app:slideInterval="3000"
         app:strokeColor="#FF777777"
-        app:strokeWidth="1dp"/>
+        app:strokeWidth="1dp" 
+        app:indicatorMarginTop="10dp"/>
 ```
 ### Include following code in your activity:
 ```java
@@ -123,24 +124,25 @@ customCarouselView.setImageClickListener(new ImageClickListener() {
 
 ### Supported xml Attributes
 
-| Attribute          	                    | Description          							   			  		 | Values 				        |
-| ------------------------------------------|--------------------------------------------------------------------|------------------------------|
-| app:slideInterval 	                    | Interval per page in ms.           			   		      		 | integer				        |
-| app:indicatorGravity                      | Gravity of the indicator.  (Just like layout_gravity) 			 | gravity                      |
-| app:indicatorOrientation                  | Orientation of the indicator. 					   			  	 | [horizontal, vertical]       |
-| app:indicatorVisibility 				                    | Set visibility of indicator. 		 | [visible,invisible,gone] 				        |
-| app:fillColor	  		                    | Color of the filled circle that represents the current page. 		 | color 				        |
-| app:pageColor   		                    | Color of the filled circles that represents pages. 		  		 | color 				        |
-| app:radius 			                    | Radius of the circles. This is also the spacing between circles.   | dimension 			        |
-| app:snap 				                    | Whether or not the selected indicator snaps to the circles. 		 | boolean 				        |
-| app:strokeColor 		                    | Width of the stroke used to draw the circles. 					 | color 				        |
-| app:autoPlay                              | Whether or not to auto play. Default: true                         | boolean                      |
-| app:disableAutoPlayOnUserInteraction      | Disables autoPlay when user interacts. Default: false              | boolean                      |
-| app:indicatorMarginHorizontal 			| Sets horizontal margin for Indicator in Carousel View              | dimension 			        |
-| app:indicatorMarginVertical 			    | Sets vertical margin for Indicator in Carousel View                | dimension 			        |
-| app:pageTransformInterval                 | Sets speed at which page will slide from one to another in ms.     | integer                      |
-| app:pageTransformer                       | Sets page transition animation.                                    | [zoom,flow,depth,slide_over] |
-| app:animateOnBoundary                     | Sets whether to animate from last page. Default: true              | boolean                      |
+| Attribute          	                    | Description          							   			  		                           | Values 				        |
+| ------------------------------------------|------------------------------------------------------------------|------------------------------|
+| app:slideInterval 	                    | Interval per page in ms.           			   		      		              | integer				        |
+| app:indicatorGravity                      | Gravity of the indicator.  (Just like layout_gravity) 			        | gravity                      |
+| app:indicatorOrientation                  | Orientation of the indicator. 					   			  	                     | [horizontal, vertical]       |
+| app:indicatorVisibility 				                    | Set visibility of indicator. 		                                  | [visible,invisible,gone] 				        |
+| app:fillColor	  		                    | Color of the filled circle that represents the current page. 		  | color 				        |
+| app:pageColor   		                    | Color of the filled circles that represents pages. 		  		        | color 				        |
+| app:radius 			                    | Radius of the circles. This is also the spacing between circles. | dimension 			        |
+| app:snap 				                    | Whether or not the selected indicator snaps to the circles. 		   | boolean 				        |
+| app:strokeColor 		                    | Width of the stroke used to draw the circles. 					              | color 				        |
+| app:autoPlay                              | Whether or not to auto play. Default: true                       | boolean                      |
+| app:disableAutoPlayOnUserInteraction      | Disables autoPlay when user interacts. Default: false            | boolean                      |
+| app:indicatorMarginHorizontal 			| Sets horizontal margin for Indicator in Carousel View            | dimension 			        |
+| app:indicatorMarginVertical 			    | Sets vertical margin for Indicator in Carousel View              | dimension 			        |
+| app:indicatorMarginTop 			    | Sets top margin for Indicator in Carousel View                   | dimension 			        |
+| app:pageTransformInterval                 | Sets speed at which page will slide from one to another in ms.   | integer                      |
+| app:pageTransformer                       | Sets page transition animation.                                  | [zoom,flow,depth,slide_over] |
+| app:animateOnBoundary                     | Sets whether to animate from last page. Default: true            | boolean                      |
 
 _Note:_ Add ```xmlns:app="http://schemas.android.com/apk/res-auto"``` in your layout's root view.
 

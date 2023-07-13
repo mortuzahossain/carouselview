@@ -55,6 +55,7 @@
     <attr name="disableAutoPlayOnUserInteraction" format="boolean" />
     <attr name="indicatorMarginHorizontal" format="dimension" />
     <attr name="indicatorMarginVertical" format="dimension" />
+    <attr name="indicatorMarginTop" format="dimension" />
     <attr name="animateOnBoundary" format="boolean" />
 
     <!-- Controls the initial visibility of the view.  -->
@@ -115,6 +116,7 @@
         <attr name="indicatorMarginHorizontal" />
         <!-- Sets vertical margin for Indicator in Carousel View. -->
         <attr name="indicatorMarginVertical" />
+        <attr name="indicatorMarginTop" />
         <!-- Sets speed at which page will slide from one to another in milliseconds. -->
         <attr name="pageTransformInterval" />
         <!-- Sets page transition animation. -->
